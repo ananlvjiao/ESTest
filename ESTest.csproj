@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlgorithmTest.cs" />
+    <Compile Include="ErrorRateStats.cs" />
     <Compile Include="ESDataAccessor.cs" />
     <Compile Include="ESTestSetup.cs" />
     <Compile Include="HyperLogLog.cs" />

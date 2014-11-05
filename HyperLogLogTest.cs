@@ -24,8 +24,8 @@ namespace ESTest
                     deviceIDs.Add(deviceID);
                     log_log.Add(deviceID);
                 }
-                
-                //TestErrorRate(log_log,deviceIDs);
+
+                //TestErrorCasesNo(log_log,deviceIDs);
                 SaveHyperLogLog(log_log.LookupStream());
                 SaveToJsonFile(deviceIDs);
                 SaveToElasticSearch(deviceIDs);
@@ -40,7 +40,8 @@ namespace ESTest
             }
         }
 
-        public void TestErrorRate(HyperLogLog log_log, List<string> deviceIDs)
+        //Try to get error cases number, not the way to calculate error rate 
+        public void TestErrorCasesNo(HyperLogLog log_log, List<string> deviceIDs)
         {
             //errorNew for new ID errors; errorExt for existing ID errors
             int lastCnt = log_log.Count();

@@ -1,0 +1,40 @@
+For StdErr 0.01
+The map size (m) is :16384
+For 100 cardinality, Average error rate: 0.007,Minimum error rate: 0, Maximum error rate: 0.02
+For 1000 cardinality, Average error rate: 0.0024,Minimum error rate: 0, Maximum error rate: 0.006
+For 10000 cardinality, Average error rate: 0.00565,Minimum error rate: 0.0016, Maximum error rate: 0.0118
+For 100000 cardinality, Average error rate: 0.005343,Minimum error rate: 0.0006, Maximum error rate: 0.01312
+For 1000000 cardinality, Average error rate: 0.0065088,Minimum error rate: 0.001257, Maximum error rate: 0.016552
+
+For StdErr 0.02
+The map size (m) is :4096
+For 100 cardinality, Average error rate: 0.005,Minimum error rate: 0, Maximum error rate: 0.02
+For 1000 cardinality, Average error rate: 0.0093,Minimum error rate: 0.002, Maximum error rate: 0.015
+For 10000 cardinality, Average error rate: 0.02952,Minimum error rate: 0.004, Maximum error rate: 0.0529
+For 100000 cardinality, Average error rate: 0.016085,Minimum error rate: 0.00111, Maximum error rate: 0.04123
+For 1000000 cardinality, Average error rate: 0.0129371,Minimum error rate: 0.000314, Maximum error rate: 0.047537
+
+For StdErr 0.03
+The map size (m) is :2048
+For 100 cardinality, Average error rate: 0.012,Minimum error rate: 0, Maximum error rate: 0.03
+For 1000 cardinality, Average error rate: 0.0116,Minimum error rate: 0.001, Maximum error rate: 0.037
+For 10000 cardinality, Average error rate: 0.01517,Minimum error rate: 0.0045, Maximum error rate: 0.0268
+For 100000 cardinality, Average error rate: 0.020478,Minimum error rate: 0.00557, Maximum error rate: 0.0479
+For 1000000 cardinality, Average error rate: 0.0130921,Minimum error rate: 0.003382, Maximum error rate: 0.026196
+
+For StdErr 0.04
+The map size (m) is :1024
+For 100 cardinality, Average error rate: 0.018,Minimum error rate: 0, Maximum error rate: 0.05
+For 1000 cardinality, Average error rate: 0.0168,Minimum error rate: 0.001, Maximum error rate: 0.039
+For 10000 cardinality, Average error rate: 0.02209,Minimum error rate: 0.0024, Maximum error rate: 0.0761
+For 100000 cardinality, Average error rate: 0.031964,Minimum error rate: 0.00681, Maximum error rate: 0.07543
+For 1000000 cardinality, Average error rate: 0.024428,Minimum error rate: 0.005713, Maximum error rate: 0.048855
+
+For StdErr 0.05
+The map size (m) is :512
+For 100 cardinality, Average error rate: 0.031,Minimum error rate: 0.01, Maximum error rate: 0.09
+For 1000 cardinality, Average error rate: 0.0643,Minimum error rate: 0.033, Maximum error rate: 0.086
+For 10000 cardinality, Average error rate: 0.03539,Minimum error rate: 0.0118, Maximum error rate: 0.0643
+For 100000 cardinality, Average error rate: 0.040867,Minimum error rate: 0.00775, Maximum error rate: 0.07765
+For 1000000 cardinality, Average error rate: 0.0448871,Minimum error rate: 0.000892, Maximum error rate: 0.119119
+

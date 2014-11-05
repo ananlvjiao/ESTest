@@ -10,7 +10,7 @@ namespace ESTest
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //ESTestSetup is super slow
             ESTestSetup esTest = new ESTestSetup();
@@ -18,7 +18,9 @@ namespace ESTest
 
             HyperLogLogTest hllTest = new HyperLogLogTest();
             hllTest.SetUp();
- 
+
+            AlgorithmTest algTest = new AlgorithmTest();
+            algTest.SetUp();
         }
     }
 }

@@ -35,7 +35,13 @@ namespace ESTest
             //This gives you the byte array.
             return mStream.ToArray();
         }
-        public HyperLogLog(double stdError)
+
+       public double GetMapSize()
+       {
+           return this.mapSize;
+       }
+
+       public HyperLogLog(double stdError)
         {
             mapSize = (double)1.04 / stdError;
             k = (long)Math.Ceiling(log2(mapSize * mapSize));
