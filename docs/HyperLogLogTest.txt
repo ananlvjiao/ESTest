@@ -1,0 +1,28 @@
+curl -XPOST "http://localhost:9200/hlltest" -d'
+{
+    "mappings" : {
+        "device_dict" : {
+            "_source" : { "enabled" : true },
+            "properties" : {
+                        "device_id" : {"type": "string" },
+                        "cnt"  : {"type": "integer" }
+                }
+            }
+        }
+}'
+
+curl -XPUT "http://localhost:9200/hlltest/_mapping/hyperloglog" -d'
+{
+    "hyperloglog":
+    {
+        "properties" : {
+                        "device_dict" : {"type": "string" }
+                        
+        }
+    }
+}'
+
+//8 second to download file
+elasticdump --all=true --input=http://localhost:9200/ --output=./hlltestdump.json
+
+

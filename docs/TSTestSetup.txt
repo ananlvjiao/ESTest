@@ -1,0 +1,64 @@
+curl -XPOST "http://localhost:9200/estest" -d'
+{
+   "mappings": {
+      "normal_dictionary": {
+         "_source": {
+            "enabled": true
+         },
+         "properties": {
+            "timestamp": {
+               "type": "integer"
+            },
+            "device_dict": {
+               "type": "nested",
+               "properties": {
+                  "device_id": {
+                     "type": "string"
+                  },
+                  "cnt": {
+                     "type": "integer"
+                  }
+               }
+            }
+         }
+      },
+      "hyperloglog": {
+         "properties": {
+            "device_dict": {
+               "type": "string"
+            },
+            "timestamp": {
+               "type": "integer"
+            }
+         }
+      }
+   }
+}'
+
+curl -XPOST "http://localhost:9200/estest/normal_dictionary/1" -d'
+{
+   "normal_dictionary": {
+      "timestamp": 0,
+      "device_dict": [
+         {
+            "device_id": "TEST-ESTE-TSTR",
+            "cnt": 2
+         }
+      ]
+   }
+}'
+
+curl -XGET "http://localhost:9200/estest/normal_dictionary/1?pretty"
+
+curl -XGET "http://localhost:9200/estest/_stats"
+
+curl -XPOST "http://localhost:9200/estest/normal_dictionary/_search " -d'
+{
+    "aggs": {
+        "device_count":
+            { 
+                "value_count" : 
+                { "field" : "device_dict.device_id" }
+            }
+    }
+}'

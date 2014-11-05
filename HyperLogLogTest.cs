@@ -15,7 +15,7 @@ namespace ESTest
         {
             try
             {
-                int size = 500000;
+                int size = 100000;
                 List<string> deviceIDs = new List<string>();
                 HyperLogLog log_log = new HyperLogLog(0.02);
                 for (int i = 0; i < size; i++)
@@ -25,10 +25,10 @@ namespace ESTest
                     log_log.Add(deviceID);
                 }
                 
-                TestErrorRate(log_log,deviceIDs);
+                //TestErrorRate(log_log,deviceIDs);
                 SaveHyperLogLog(log_log.LookupStream());
-                //SaveToJsonFile(deviceIDs);
-                //SaveToElasticSearch(deviceIDs);
+                SaveToJsonFile(deviceIDs);
+                SaveToElasticSearch(deviceIDs);
                 SaveHyperLogLogToES(log_log.LookupStream());
 
                 int strLen = log_log.LookupStream().Length;

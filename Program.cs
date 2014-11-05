@@ -12,6 +12,7 @@ namespace ESTest
     {
         static void Main(string[] args)
         {
+            //ESTestSetup is super slow
             ESTestSetup esTest = new ESTestSetup();
             esTest.SetUp();
 
