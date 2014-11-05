@@ -20,9 +20,25 @@ HyperLogLogTest
 
 [Index dump] (/docs/hlltestdump.json)
 
-
+C# implementation
+--------------------------------
 Use C# implementation from http://adnan-korkmaz.blogspot.com/2012/06/hyperloglog-c-implementation.html 
 
-For 100,000 deviceIDs (GUID), when set the standard error to be 0.02, the size of hyperloglog dictionary in binary file is 70KB; error rate is around 0.3%. Dictionary size and error rate seem related to the standard error. Need to do reading to figure it.
+Error rate, map size, and numbers of cardinality 
 
-If save the deviceIDs into elasticsearch, the size of the index is 20MB.
+[Test Result] (/docs/HyperLogLogTestResult.text)
+The test result lists based on different standard error, what the map size is; and it also lists for different cardinality, (10 times) average error rate, min error rate and max error rate.
+
+The C# implementation requires to pass the value of the param "stdError"(standard error) to initialize the HyperLogLog. The standard error and map size relationship is defined in paper http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf
+stdError = 1.04/√m
+
+The hash function output is 32bits in the C# implementation. 
+
+
+Redis implementation 
+----------------------------------
+https://github.com/antirez/redis/blob/unstable/src/hyperloglog.c
+
+using the params: m = 16384, 64 bits hash output, standard error = 0.0081
+
+
