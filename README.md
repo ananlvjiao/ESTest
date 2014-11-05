@@ -21,6 +21,8 @@ HyperLogLogTest
 [Index dump] (/docs/hlltestdump.json)
 
 
-Use C# implementation from http://adnan-korkmaz.blogspot.com/2012/06/hyperloglog-c-implementation.html
+Use C# implementation from http://adnan-korkmaz.blogspot.com/2012/06/hyperloglog-c-implementation.html 
 
-For 100,000 deviceIDs (GUID), when set the standard error to be 0.02, the size of hyperloglog dictionary in binary file is 70KB; error rate is around 0.3%,the size of the index is 20MB
+For 100,000 deviceIDs (GUID), when set the standard error to be 0.02, the size of hyperloglog dictionary in binary file is 70KB; error rate is around 0.3%. Dictionary size and error rate seem related to the standard error, need to do reading to figure it.
+
+If save the deviceIDs into elasticsearch, the size of the index is 20MB.
